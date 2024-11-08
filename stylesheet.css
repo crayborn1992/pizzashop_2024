@@ -1,0 +1,378 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    background-color: black;
+    max-width: 1200px;
+}
+
+/*------------HEADERS------------*/
+
+h1 {
+    color: darkolivegreen;
+    /*font-family: Georgia, 'Times New Roman', Times, serif;*/
+    font: bold 2.2em Times, serif;
+    text-shadow: .025em .025em .025em #678039;
+    border-bottom: 1.5px solid #D61313;
+}
+
+h2 {
+    font: bold 1.7em Times, serif;
+    color: olivedrab;
+    text-transform: uppercase;
+    letter-spacing: .050em;
+}
+
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #D61313;
+}
+
+p {
+    margin-left: 25px;
+}
+
+#pizza, #drinks, #treats {
+    border: 2px solid;
+    background-color: rgba(53, 54, 53, 0.808);
+    color: whitesmoke;
+    padding: 5px 20px;
+    margin: 10px 20px;
+}
+
+/*------------NAV STYLE------------*/
+
+.navigation {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: rgb(0, 0, 0);
+    padding: .3em;
+    margin: 0;
+}
+
+.navigation a{
+    color: rgba(241, 0, 0, 0.562);
+    padding: 40px 20px;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(10, 87, 23)
+}
+
+li.logo {
+    margin-left: auto;
+}
+
+html {
+    box-sizing: border-box;
+}
+* {
+    box-sizing: border-box;
+}
+
+/*------------HERO IMAGE------------*/
+
+.hero_image {
+    background-image: url(images/hero_image.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero_header {
+    text-align: left;
+    position: absolute;
+    color: whitesmoke;
+    top: 35%;
+    text-shadow: .05em .05em .0em black;
+    font-size: 3em;
+    margin: 20px;
+}
+
+.hero_text {
+    text-align: left;
+    position: absolute;
+    color: whitesmoke;
+    top: 50%;
+    text-shadow: .05em .05em .1em black;
+    font-size: 1em;
+}
+
+/*------------BUTTON------------*/
+
+.button {
+    background-color:  rgba(241, 0, 0, 0.562);
+    border: none;
+    color: white;
+    display: inline-block;
+    font-size: 18px;
+    margin: 6px 3px;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*------------GRID------------*/
+
+@media screen and (max-width: 800px) {
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+        'welcome        shop            shop'
+        'highlights     highlights      highlights'
+        'fact1          fact2           fact3'
+        'about          review          review'
+        'menu           menu            menu'
+        'product1       product2        product3'
+        'arcade         arcade          arcade';
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+}
+
+.welcome {
+    grid-area: welcome;
+    text-align: center;
+}
+
+.shop {
+    grid-area: shop;
+    text-align: center;
+}
+
+.highlights {
+    grid-area: highlights;
+    text-align: center;
+}
+
+.fact1 {
+    grid-area: fact1;
+    text-align: center;
+}
+
+.fact2 {
+    grid-area: fact2;
+    text-align: center;
+}
+
+.fact3 {
+    grid-area: fact3;
+    text-align: center;
+}
+
+.about {
+    grid-area: about;
+    text-align: center;
+}
+
+.menu {
+    grid-area: menu;
+    text-align: center;
+}
+
+.product1 {
+    grid-area: product1;
+    text-align: center;
+}
+
+.product2 {
+    grid-area: product2;
+    text-align: center;
+}
+
+.product3 {
+    grid-area: product3;
+    text-align: center;
+}
+
+.arcade {
+    grid-area: arcade;
+    text-align: center;
+}
+
+.review {
+    grid-area: review;
+    text-align: center;
+    margin: 0px 15px 0px 30px;
+    padding: 60px 0px 60px 0px;
+}
+
+/*------------RESPONSIVE GALLERY----------*/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/*------------IMAGES------------*/
+
+img { 
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*------------FOOTER------------*/
+
+footer {
+    background-color:  olivedrab;
+    color: rgb(255, 248, 233);
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+@media screen and (min-width: 800px) {
+      body {
+	  color: black;
+	  background-color: white;
+	} 
+}	
+
+/*------------MEDIA QUERIES------------*/
+
+/* Base styles (Desktop) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.hero {
+    background-image: url(images/hero_image.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    color: white;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+.feature {
+    width: 30%;
+    text-align: center;
+}
+
+.testimonials {
+    padding: 40px 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Tablet styles */
+@media (max-width: 1023px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .feature {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .header {
+        align-items: center;
+    }
+
+    .hero {
+        padding: 50px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .button {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .feature {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .testimonials {
+        display: block;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
